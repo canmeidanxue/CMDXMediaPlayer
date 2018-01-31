@@ -66,8 +66,10 @@ public class MainActivity extends Activity {
 //        http://117.34.59.13/sportsts.tc.qq.com/A9FC4J3caGY6YPZYSqceRbEYi_tUSYEGNgnXM8bszEJw/vKbXO00e_ncFHBRsBYvs1aVBohr1UuOh9FQ6OvmYWzgUUZhQ6S42NExzJ0oDAAUCcOpvOP70lgSmHNqWV9oa7KUw1XBvWi6XKzV4fi748ZeV8Je2ZZ-8kQ/03_s0025ly7sbs.321002.1.ts?index=3&start=32240&end=44200&brs=4235828&bre=5902823&ver=4
 //        http://117.34.59.13/sportsts.tc.qq.com/A9FC4J3caGY6YPZYSqceRbEYi_tUSYEGNgnXM8bszEJw/vKbXO00e_ncFHBRsBYvs1aVBohr1UuOh9FQ6OvmYWzgUUZhQ6S42NExzJ0oDAAUCcOpvOP70lgSmHNqWV9oa7KUw1XBvWi6XKzV4fi748ZeV8Je2ZZ-8kQ/04_s0025ly7sbs.321002.1.ts?index=4&start=44200&end=56200&brs=5902824&bre=7407387&ver=4
 //        http://117.34.59.13/sportsts.tc.qq.com/A9FC4J3caGY6YPZYSqceRbEYi_tUSYEGNgnXM8bszEJw/vKbXO00e_ncFHBRsBYvs1aVBohr1UuOh9FQ6OvmYWzgUUZhQ6S42NExzJ0oDAAUCcOpvOP70lgSmHNqWV9oa7KUw1XBvWi6XKzV4fi748ZeV8Je2ZZ-8kQ/012_s0025ly7sbs.321002.1.ts?index=12&start=140200&end=152200&brs=18334888&bre=19798091&ver=4
-
-        media = new Media(libVLC, Uri.parse("http://1.82.215.22/sportsts.tc.qq.com/AfuAm_g3KiKHSj48wOj45hHpixBmlzcvmLIUYT35yc8k/AVb0caw7p2UuHSIUNDr5reaI7eehTbqB8cnxU_bs8ppA7KwACu5ogkB5fRKTje45aYTkhZY8XBwkAhDIqxWivkFmRTQmHZd_upKjWKkvGWHx7_fNXGU7yg/02_o0025oha9qn.321002.1.ts?index=2&start=20240&end=32240&brs=2526720&bre=4238647&ver=4"));
+        String url = "http://ali.cdn.kaiyanapp.com/001b4dad64b4feb72061af7d5af9e26c_1280x720.mp4?auth_key=1517413245-0-0-6ac0dbbc31de4e371910ba4646d94b08";
+//        String url = "http://ali.cdn.kaiyanapp.com/001b4dad64b4feb72061af7d5af9e26c_1280x720.mp4?auth_key=1517413245-0-0-6ac0dbbc31de4e371910ba4646d94b08";
+//        String url = "http://ali.cdn.kaiyanapp.com/1517226821461_9870345d.mp4?auth_key=1517413289-0-0-5290811e131b3f3d821788de885176f1";
+        media = new Media(libVLC, Uri.parse("http://ali.cdn.kaiyanapp.com/1517377532227_c2da4ce8_2160x1080.mp4?auth_key=1517413134-0-0-bc6853a9066a396727cad6e47f2be3a9"));
         mediaPlayer.setMedia(media);
 
         ivlcVout = mediaPlayer.getVLCVout();
