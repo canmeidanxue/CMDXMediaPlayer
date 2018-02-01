@@ -1,20 +1,29 @@
 package com.bulesky.vlcdemo;
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+
+import com.github.kayvannj.permission_utils.Func;
+import com.github.kayvannj.permission_utils.PermissionUtil;
 
 import org.videolan.libvlc.IVLCVout;
 import org.videolan.libvlc.LibVLC;
 import org.videolan.libvlc.Media;
 import org.videolan.libvlc.MediaPlayer;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     private SurfaceView surfaceView;
     private SurfaceHolder surfaceHolder;
     private LibVLC libVLC;
@@ -22,15 +31,43 @@ public class MainActivity extends Activity {
     private Media media;
     private IVLCVout ivlcVout;
     private static final String TAG = "MainActivity";
+    /**
+     * 视频源url
+     */
+    private String url = "http://112.253.22.157/17/z/z/y/u/zzyuasjwufnqerzvyxgkuigrkcatxr/hc.yinyuetai.com/D046015255134077DDB3ACA0D7E68D45.flv";
+    private String uri = "";
+    private PermissionUtil.PermissionRequestObject mStoragePermissionRequest;
+
+    public static final String READ_EXTERNAL_STORAGE = Manifest.permission.READ_EXTERNAL_STORAGE;
+
+    private int REQUEST_CODE_STORAGE = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        uri = "mnt/sdcard/Movies/wait_for_you_to_class.mp4";
+        mStoragePermissionRequest = PermissionUtil.with(this).request(READ_EXTERNAL_STORAGE).onAllGranted(
+                new Func() {
+                    @Override
+                    protected void call() {
+                        //Happy Path
+                    }
+                }).onAnyDenied(
+                new Func() {
+                    @Override
+                    protected void call() {
+                        //Sad Path
+                    }
+                }).ask(REQUEST_CODE_STORAGE);
         surfaceView = findViewById(R.id.surfaceView);
         initPlayer();
     }
 
+
+    /**
+     * 初始化Player
+     */
     private void initPlayer() {
         ArrayList<String> options = new ArrayList<>();
         options.add("--aout=opensles");
@@ -58,18 +95,9 @@ public class MainActivity extends Activity {
 
         mediaPlayer = new MediaPlayer(libVLC);
 
-        //media = new Media(libvlc, Uri.parse("http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8"));
 
-        // take live555 as RTSP server
-//        http://1.82.215.22/sportsts.tc.qq.com/AfuAm_g3KiKHSj48wOj45hHpixBmlzcvmLIUYT35yc8k/AVb0caw7p2UuHSIUNDr5reaI7eehTbqB8cnxU_bs8ppA7KwACu5ogkB5fRKTje45aYTkhZY8XBwkAhDIqxWivkFmRTQmHZd_upKjWKkvGWHx7_fNXGU7yg/00_o0025oha9qn.321002.1.ts?index=0&start=0&end=8320&brs=0&bre=977035&ver=4
-//        http://1.82.215.22/sportsts.tc.qq.com/AfuAm_g3KiKHSj48wOj45hHpixBmlzcvmLIUYT35yc8k/AVb0caw7p2UuHSIUNDr5reaI7eehTbqB8cnxU_bs8ppA7KwACu5ogkB5fRKTje45aYTkhZY8XBwkAhDIqxWivkFmRTQmHZd_upKjWKkvGWHx7_fNXGU7yg/01_o0025oha9qn.321002.1.ts?index=1&start=8320&end=20240&brs=977036&bre=2526719&ver=4
-//        http://117.34.59.13/sportsts.tc.qq.com/A9FC4J3caGY6YPZYSqceRbEYi_tUSYEGNgnXM8bszEJw/vKbXO00e_ncFHBRsBYvs1aVBohr1UuOh9FQ6OvmYWzgUUZhQ6S42NExzJ0oDAAUCcOpvOP70lgSmHNqWV9oa7KUw1XBvWi6XKzV4fi748ZeV8Je2ZZ-8kQ/03_s0025ly7sbs.321002.1.ts?index=3&start=32240&end=44200&brs=4235828&bre=5902823&ver=4
-//        http://117.34.59.13/sportsts.tc.qq.com/A9FC4J3caGY6YPZYSqceRbEYi_tUSYEGNgnXM8bszEJw/vKbXO00e_ncFHBRsBYvs1aVBohr1UuOh9FQ6OvmYWzgUUZhQ6S42NExzJ0oDAAUCcOpvOP70lgSmHNqWV9oa7KUw1XBvWi6XKzV4fi748ZeV8Je2ZZ-8kQ/04_s0025ly7sbs.321002.1.ts?index=4&start=44200&end=56200&brs=5902824&bre=7407387&ver=4
-//        http://117.34.59.13/sportsts.tc.qq.com/A9FC4J3caGY6YPZYSqceRbEYi_tUSYEGNgnXM8bszEJw/vKbXO00e_ncFHBRsBYvs1aVBohr1UuOh9FQ6OvmYWzgUUZhQ6S42NExzJ0oDAAUCcOpvOP70lgSmHNqWV9oa7KUw1XBvWi6XKzV4fi748ZeV8Je2ZZ-8kQ/012_s0025ly7sbs.321002.1.ts?index=12&start=140200&end=152200&brs=18334888&bre=19798091&ver=4
-        String url = "http://ali.cdn.kaiyanapp.com/001b4dad64b4feb72061af7d5af9e26c_1280x720.mp4?auth_key=1517413245-0-0-6ac0dbbc31de4e371910ba4646d94b08";
-//        String url = "http://ali.cdn.kaiyanapp.com/001b4dad64b4feb72061af7d5af9e26c_1280x720.mp4?auth_key=1517413245-0-0-6ac0dbbc31de4e371910ba4646d94b08";
-//        String url = "http://ali.cdn.kaiyanapp.com/1517226821461_9870345d.mp4?auth_key=1517413289-0-0-5290811e131b3f3d821788de885176f1";
-        media = new Media(libVLC, Uri.parse("http://ali.cdn.kaiyanapp.com/1517377532227_c2da4ce8_2160x1080.mp4?auth_key=1517413134-0-0-bc6853a9066a396727cad6e47f2be3a9"));
+//        media = new Media(libVLC, Uri.parse(url));
+        media = new Media(libVLC, uri);
         mediaPlayer.setMedia(media);
 
         ivlcVout = mediaPlayer.getVLCVout();
@@ -99,4 +127,5 @@ public class MainActivity extends Activity {
 
         mediaPlayer.play();
     }
+
 }
