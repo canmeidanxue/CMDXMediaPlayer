@@ -3,9 +3,8 @@ package com.bulesky.vlcdemo;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Display;
 import android.view.SurfaceHolder;
@@ -26,6 +25,9 @@ import org.videolan.libvlc.LibVLC;
 import org.videolan.libvlc.Media;
 import org.videolan.libvlc.MediaPlayer;
 
+/**
+ * @author hsl
+ */
 public class VLCPlayerActivity extends AppCompatActivity {
 
     private IVLCVout vlcVout;
@@ -129,28 +131,28 @@ public class VLCPlayerActivity extends AppCompatActivity {
             mediaPlayer = new MediaPlayer(libvlc);
             vlcVout = mediaPlayer.getVLCVout();
             callback = new IVLCVout.Callback() {
-//                public void onNewLayout(IVLCVout ivlcVout, int i, int i1, int i2, int i3, int i4, int i5) {
-//                    try {
-//                        totalTime = mediaPlayer.getLength();
-//                        seekBarTime.setMax((int) totalTime);
-//                        tvTotalTime.setText(SystemUtil.getMediaTime((int) totalTime));
-//
-//                        videoWidth = i;
-//                        videoHight = i1;
-//
-//                        WindowManager windowManager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
-//                        Display display = windowManager.getDefaultDisplay();
-//                        Point point = new Point();
-//                        display.getSize(point);
-//
-//                        ViewGroup.LayoutParams layoutParams = surfaceView.getLayoutParams();
-//                        layoutParams.width = point.x;
-//                        layoutParams.height = (int) Math.ceil((float) videoHight * (float) point.x / (float) videoWidth);
-//                        surfaceView.setLayoutParams(layoutParams);
-//                    } catch (Exception e) {
-//                        Log.d("vlc-newlayout", e.toString());
-//                    }
-//                }
+                public void onNewLayout(IVLCVout ivlcVout, int i, int i1, int i2, int i3, int i4, int i5) {
+                    try {
+                        totalTime = mediaPlayer.getLength();
+                        seekBarTime.setMax((int) totalTime);
+                        tvTotalTime.setText(SystemUtil.getMediaTime((int) totalTime));
+
+                        videoWidth = i;
+                        videoHight = i1;
+
+                        WindowManager windowManager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
+                        Display display = windowManager.getDefaultDisplay();
+                        Point point = new Point();
+                        display.getSize(point);
+
+                        ViewGroup.LayoutParams layoutParams = surfaceView.getLayoutParams();
+                        layoutParams.width = point.x;
+                        layoutParams.height = (int) Math.ceil((float) videoHight * (float) point.x / (float) videoWidth);
+                        surfaceView.setLayoutParams(layoutParams);
+                    } catch (Exception e) {
+                        Log.d("vlc-newlayout", e.toString());
+                    }
+                }
 
                 @Override
                 public void onSurfacesCreated(IVLCVout ivlcVout) {
@@ -172,7 +174,7 @@ public class VLCPlayerActivity extends AppCompatActivity {
 //            } else {
 //                media = new Media(libvlc, Uri.parse(intent.getStringExtra("VideoUrl")));
 //            }
-            media = new Media(libvlc,"mnt/sdcard/Movies/wait_for_you_to_class.mp4");
+            media = new Media(libvlc, "mnt/sdcard/Movies/wait_for_you_to_class.mp4");
 
             mediaPlayer.setMedia(media);
 
@@ -340,4 +342,5 @@ public class VLCPlayerActivity extends AppCompatActivity {
             Log.d("vlc-back", e.toString());
         }
     }
+
 }

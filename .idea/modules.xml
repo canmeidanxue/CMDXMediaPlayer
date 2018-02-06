@@ -5,9 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/CMDXMediaPlayer.iml" filepath="$PROJECT_DIR$/.idea/CMDXMediaPlayer.iml" />
       <module fileurl="file://G:\workspace\CMDXMediaPlayer\CMDXMediaPlayer.iml" filepath="G:\workspace\CMDXMediaPlayer\CMDXMediaPlayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://G:\workspace\CMDXMediaPlayer\app\app.iml" filepath="G:\workspace\CMDXMediaPlayer\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/vlclibrary/vlclibrary.iml" filepath="$PROJECT_DIR$/vlclibrary/vlclibrary.iml" />
-      <module fileurl="file://G:\workspace\CMDXMediaPlayer\vlclibrary\vlclibrary.iml" filepath="G:\workspace\CMDXMediaPlayer\vlclibrary\vlclibrary.iml" />
     </modules>
   </component>
 </project>
