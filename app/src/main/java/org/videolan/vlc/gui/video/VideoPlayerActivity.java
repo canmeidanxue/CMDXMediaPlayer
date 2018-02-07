@@ -20,6 +20,7 @@
 
 package org.videolan.vlc.gui.video;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.KeyguardManager;
@@ -52,6 +53,7 @@ import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.GestureDetectorCompat;
@@ -97,17 +99,18 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bulesky.vlcdemo.BuildConfig;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.Medialibrary;
+import com.bulesky.vlcdemo.media.Tools;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.libvlc.IVLCVout;
 import org.videolan.libvlc.LibVLC;
 import org.videolan.libvlc.Media;
 import org.videolan.libvlc.MediaPlayer;
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.medialibrary.Medialibrary;
-import org.videolan.medialibrary.Tools;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.vlc.BuildConfig;
 import org.videolan.vlc.PlaybackService;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.MainActivity;
 import org.videolan.vlc.gui.PlaybackServiceActivity;
@@ -369,6 +372,7 @@ public class VideoPlayerActivity extends AppCompatActivity implements IVLCVout.C
         return VLCInstance.get();
     }
 
+    @SuppressLint("RestrictedApi")
     @Override
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     protected void onCreate(Bundle savedInstanceState) {
@@ -1392,6 +1396,7 @@ public class VideoPlayerActivity extends AppCompatActivity implements IVLCVout.C
         showDelayControls();
     }
 
+    @SuppressLint("RestrictedApi")
     public void showDelayControls(){
         mTouchAction = TOUCH_NONE;
         if (mPresentation != null)
@@ -1574,6 +1579,7 @@ public class VideoPlayerActivity extends AppCompatActivity implements IVLCVout.C
         mHandler.sendEmptyMessageDelayed(FADE_OUT_INFO, duration);
     }
 
+    @SuppressLint("RestrictedApi")
     private void initInfoOverlay() {
         ViewStubCompat vsc = (ViewStubCompat) findViewById(R.id.player_info_stub);
         if (vsc != null) {

@@ -37,11 +37,12 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 
-import org.videolan.medialibrary.Tools;
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.vlc.BR;
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.BR;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.Tools;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.vlc.SortableAdapter;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.helpers.AsyncImageLoader;

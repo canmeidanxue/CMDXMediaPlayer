@@ -36,10 +36,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.vlc.BR;
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.BR;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.media.MediaGroup;
 import org.videolan.vlc.util.HttpImageLoader;

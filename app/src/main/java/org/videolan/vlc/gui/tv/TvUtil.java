@@ -36,9 +36,10 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.util.LruCache;
 import android.text.TextUtils;
 
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.DialogActivity;
 import org.videolan.vlc.gui.helpers.AudioUtil;

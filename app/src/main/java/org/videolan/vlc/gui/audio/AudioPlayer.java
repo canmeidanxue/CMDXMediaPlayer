@@ -58,15 +58,16 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.databinding.AudioPlayerBinding;
+import com.bulesky.vlcdemo.media.Tools;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.libvlc.Media;
 import org.videolan.libvlc.MediaPlayer;
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.medialibrary.Tools;
-import org.videolan.medialibrary.media.MediaWrapper;
 import org.videolan.vlc.PlaybackService;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
-import org.videolan.vlc.databinding.AudioPlayerBinding;
 import org.videolan.vlc.gui.AudioPlayerContainerActivity;
 import org.videolan.vlc.gui.PlaybackServiceFragment;
 import org.videolan.vlc.gui.dialogs.AdvOptionsDialog;

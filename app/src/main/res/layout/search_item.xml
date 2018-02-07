@@ -8,7 +8,7 @@
             type="android.graphics.drawable.BitmapDrawable"/>
         <variable
             name="item"
-            type="org.videolan.medialibrary.media.MediaLibraryItem"/>
+            type="com.bulesky.vlcdemo.media.model.MediaLibraryItem"/>
         <variable
             name="holder"
             type="org.videolan.vlc.gui.SearchResultAdapter.ViewHolder" />

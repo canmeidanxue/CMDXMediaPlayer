@@ -4,7 +4,7 @@
         <import type="android.view.View" />
         <variable
             name="searchAggregate"
-            type="org.videolan.medialibrary.media.SearchAggregate" />
+            type="com.bulesky.vlcdemo.media.model.SearchAggregate" />
         <variable
             name="handler"
             type="org.videolan.vlc.gui.SearchActivity.ClickHandler" />

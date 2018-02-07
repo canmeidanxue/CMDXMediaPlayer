@@ -23,6 +23,7 @@
 
 package org.videolan.vlc.gui;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -47,13 +48,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import org.videolan.medialibrary.Medialibrary;
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.medialibrary.media.Playlist;
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.databinding.PlaylistActivityBinding;
+import com.bulesky.vlcdemo.media.Medialibrary;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+import com.bulesky.vlcdemo.media.model.Playlist;
+
 import org.videolan.vlc.VLCApplication;
-import org.videolan.vlc.databinding.PlaylistActivityBinding;
 import org.videolan.vlc.gui.audio.AudioBrowserAdapter;
 import org.videolan.vlc.gui.audio.AudioBrowserFragment;
 import org.videolan.vlc.gui.dialogs.SavePlaylistDialog;
@@ -111,6 +113,7 @@ public class PlaylistActivity extends AudioPlayerContainerActivity implements IE
                     if (cover != null) {
                         mBinding.setCover(new BitmapDrawable(PlaylistActivity.this.getResources(), cover));
                         VLCApplication.runOnMainThread(new Runnable() {
+                            @SuppressLint("WrongConstant")
                             @Override
                             public void run() {
                                 mBinding.appbar.setExpanded(true, true);

@@ -36,10 +36,11 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.bulesky.vlcdemo.BuildConfig;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.vlc.BuildConfig;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.media.MediaUtils;
 import org.videolan.vlc.util.AndroidDevices;

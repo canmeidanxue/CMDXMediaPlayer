@@ -25,7 +25,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.R;
+
 
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
 public class SearchActivity extends FragmentActivity {

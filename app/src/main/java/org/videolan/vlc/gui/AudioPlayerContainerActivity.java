@@ -23,6 +23,7 @@
 
 package org.videolan.vlc.gui;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -48,11 +49,12 @@ import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import org.videolan.vlc.BuildConfig;
+import com.bulesky.vlcdemo.BuildConfig;
+import com.bulesky.vlcdemo.R;
+
 import org.videolan.vlc.ExternalMonitor;
 import org.videolan.vlc.MediaParsingService;
 import org.videolan.vlc.PlaybackService;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.audio.AudioPlayer;
 import org.videolan.vlc.gui.browser.StorageBrowserFragment;
@@ -109,6 +111,7 @@ public class AudioPlayerContainerActivity extends BaseActivity implements Playba
         mAudioPlayerContainer = (FrameLayout) findViewById(R.id.audio_player_container);
     }
 
+    @SuppressLint("RestrictedApi")
     private void initAudioPlayer() {
         ((ViewStubCompat)findViewById(R.id.audio_player_stub)).inflate();
         mAudioPlayer = (AudioPlayer) getSupportFragmentManager().findFragmentById(R.id.audio_player);
@@ -231,7 +234,7 @@ public class AudioPlayerContainerActivity extends BaseActivity implements Playba
             return;
         View vsc = findViewById(stubId);
         if (vsc != null && !mSettings.getBoolean(settingKey, false) && !VLCApplication.showTvUi()) {
-            View v = ((ViewStubCompat)vsc).inflate();
+            @SuppressLint("RestrictedApi") View v = ((ViewStubCompat)vsc).inflate();
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

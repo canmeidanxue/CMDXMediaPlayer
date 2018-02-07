@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
         <import type="android.view.View"/>
@@ -10,7 +11,7 @@
             type="org.videolan.vlc.gui.audio.PlaylistAdapter.ViewHolder"/>
         <variable
             name="media"
-            type="org.videolan.medialibrary.media.MediaWrapper"/>
+            type="com.bulesky.vlcdemo.media.model.MediaWrapper"/>
         <variable
             name="subTitle"
             type="String"/>
@@ -49,7 +50,8 @@
                 android:maxLines="1"
                 android:text="@{media.title}"
                 android:textColor="@{titleColor}"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                tools:ignore="EllipsizeMaxLines" />
             <TextView
                 android:id="@+id/audio_item_subtitle"
                 android:layout_width="match_parent"
@@ -63,7 +65,8 @@
                 android:textColor="?attr/list_subtitle"
                 android:fontFamily="sans-serif-light"
                 android:textSize="12sp"
-                android:visibility="@{TextUtils.isEmpty(subTitle) ? View.GONE : View.VISIBLE}"/>
+                android:visibility="@{TextUtils.isEmpty(subTitle) ? View.GONE : View.VISIBLE}"
+                tools:ignore="EllipsizeMaxLines" />
         </LinearLayout>
 
         <ImageView

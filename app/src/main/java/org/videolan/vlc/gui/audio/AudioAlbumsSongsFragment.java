@@ -25,8 +25,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -37,6 +40,7 @@ import android.widget.Filter;
 
 import com.bulesky.vlcdemo.media.Medialibrary;
 import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
 
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.PlaylistActivity;

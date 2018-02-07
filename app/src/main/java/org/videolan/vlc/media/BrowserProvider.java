@@ -41,8 +41,15 @@ import android.support.annotation.WorkerThread;
 import android.support.v4.media.MediaBrowserCompat;
 import android.support.v4.media.MediaDescriptionCompat;
 
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.Medialibrary;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.vlc.VLCApplication;
+import org.videolan.vlc.extensions.ExtensionListing;
 import org.videolan.vlc.extensions.ExtensionManagerService;
+import org.videolan.vlc.extensions.ExtensionsManager;
 import org.videolan.vlc.gui.helpers.AudioUtil;
 
 import java.util.ArrayList;
@@ -54,7 +61,7 @@ public class BrowserProvider implements ExtensionManagerService.ExtensionManager
 
     private static final String TAG = "VLC/BrowserProvider";
 
-    private static final Bitmap DEFAULT_AUDIO_COVER = BitmapFactory.decodeResource(VLCApplication.getAppResources(), R.drawable.ic_menu_audio);
+    private static final Bitmap DEFAULT_AUDIO_COVER = BitmapFactory.decodeResource(VLCApplication.getAppResources(), R.mipmap.ic_menu_audio);
     private static final String BASE_DRAWABLE_URI = "android.resource://"+VLCApplication.getAppContext().getPackageName()+"/drawable/";
 
     public static final String ID_ROOT = "ID_ROOT";

@@ -1,6 +1,7 @@
 package org.videolan.vlc.gui;
 
 
+import android.annotation.SuppressLint;
 import android.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -18,18 +19,19 @@ import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.databinding.InfoActivityBinding;
+import com.bulesky.vlcdemo.media.Medialibrary;
+import com.bulesky.vlcdemo.media.Tools;
+import com.bulesky.vlcdemo.media.model.Album;
+import com.bulesky.vlcdemo.media.model.Artist;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.libvlc.LibVLC;
 import org.videolan.libvlc.Media;
 import org.videolan.libvlc.util.Extensions;
-import org.videolan.medialibrary.Medialibrary;
-import org.videolan.medialibrary.Tools;
-import org.videolan.medialibrary.media.Album;
-import org.videolan.medialibrary.media.Artist;
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
-import org.videolan.vlc.databinding.InfoActivityBinding;
 import org.videolan.vlc.gui.helpers.AudioUtil;
 import org.videolan.vlc.gui.helpers.FloatingActionButtonBehavior;
 import org.videolan.vlc.gui.preferences.PreferencesActivity;
@@ -89,6 +91,7 @@ public class InfoActivity extends AudioPlayerContainerActivity implements View.O
                     if (cover != null) {
                         mBinding.setCover(new BitmapDrawable(InfoActivity.this.getResources(), cover));
                         VLCApplication.runOnMainThread(new Runnable() {
+                            @SuppressLint("WrongConstant")
                             @Override
                             public void run() {
                                 ViewCompat.setNestedScrollingEnabled(mBinding.container, true);

@@ -44,10 +44,11 @@ import android.support.v17.leanback.widget.SpeechRecognitionCallback;
 import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
 
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.medialibrary.media.SearchAggregate;
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+import com.bulesky.vlcdemo.media.model.SearchAggregate;
+
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.util.Util;
 

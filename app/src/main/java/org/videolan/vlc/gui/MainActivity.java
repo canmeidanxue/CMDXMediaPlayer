@@ -32,6 +32,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.design.internal.NavigationMenuView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -50,17 +51,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FilterQueryProvider;
 
+import com.bulesky.vlcdemo.BuildConfig;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.Medialibrary;
+
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.medialibrary.Medialibrary;
-import org.videolan.vlc.BuildConfig;
 import org.videolan.vlc.MediaParsingService;
-import org.videolan.vlc.R;
 import org.videolan.vlc.StartActivity;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.extensions.ExtensionListing;
 import org.videolan.vlc.extensions.ExtensionManagerService;
 import org.videolan.vlc.extensions.ExtensionsManager;
-import org.videolan.vlc.extensions.api.VLCExtensionItem;
 import org.videolan.vlc.gui.audio.AudioBrowserFragment;
 import org.videolan.vlc.gui.browser.BaseBrowserFragment;
 import org.videolan.vlc.gui.browser.ExtensionBrowser;
@@ -334,6 +335,7 @@ public class MainActivity extends ContentActivity implements FilterQueryProvider
         reloadPreferences();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onBackPressed() {
         /* Close the menu first */
@@ -615,13 +617,13 @@ public class MainActivity extends ContentActivity implements FilterQueryProvider
                     new MRLPanelFragment().show(getSupportFragmentManager(), "fragment_mrl");
                     break;
                 case R.id.nav_directories:
-                    if (TextUtils.equals(BuildConfig.FLAVOR_target, "chrome")) {
-                        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-                        intent.setType("audio/* video/*");
-                        startActivityForResult(intent, ACTIVITY_RESULT_OPEN);
-                        mDrawerLayout.closeDrawer(mNavigationView);
-                        return true;
-                    }
+//                    if (TextUtils.equals(BuildConfig.FLAVOR_target, "chrome")) {
+//                        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+//                        intent.setType("audio/* video/*");
+//                        startActivityForResult(intent, ACTIVITY_RESULT_OPEN);
+//                        mDrawerLayout.closeDrawer(mNavigationView);
+//                        return true;
+//                    }
                 default:
                 /* Slide down the audio player */
                     slideDownAudioPlayer();

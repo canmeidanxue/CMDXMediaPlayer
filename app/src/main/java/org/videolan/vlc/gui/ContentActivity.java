@@ -33,7 +33,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.R;
+
 import org.videolan.vlc.gui.audio.EqualizerFragment;
 import org.videolan.vlc.gui.browser.ExtensionBrowser;
 import org.videolan.vlc.interfaces.Filterable;

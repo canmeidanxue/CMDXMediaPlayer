@@ -28,7 +28,8 @@ import android.support.v7.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.R;
+
 import org.videolan.vlc.SortableAdapter;
 import org.videolan.vlc.gui.helpers.UiTools;
 import org.videolan.vlc.util.MediaLibraryItemComparator;

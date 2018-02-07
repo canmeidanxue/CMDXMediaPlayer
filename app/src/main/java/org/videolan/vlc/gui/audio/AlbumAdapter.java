@@ -33,9 +33,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.vlc.R;
-import org.videolan.vlc.databinding.AudioBrowserItemBinding;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.databinding.AudioBrowserItemBinding;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.vlc.gui.helpers.MediaComparators;
 
 import java.util.ArrayList;

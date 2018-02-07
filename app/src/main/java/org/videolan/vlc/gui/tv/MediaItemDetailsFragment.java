@@ -41,10 +41,11 @@ import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.widget.Toast;
 
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.medialibrary.media.MediaWrapper;
 import org.videolan.vlc.PlaybackService;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.PlaybackServiceFragment;
 import org.videolan.vlc.gui.helpers.AudioUtil;

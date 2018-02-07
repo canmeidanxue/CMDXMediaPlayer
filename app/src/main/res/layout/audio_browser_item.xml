@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:vlc="http://schemas.android.com/apk/res-auto">
     <data>
         <import type="android.view.View"/>
         <import type="android.text.TextUtils"/>
-        <import type="org.videolan.medialibrary.media.MediaLibraryItem"/>
+        <import type="com.bulesky.vlcdemo.media.model.MediaLibraryItem"/>
         <variable
             name="alignMode"
             type="int" />
@@ -85,7 +86,8 @@
             android:text="@{item.description}"
             android:fontFamily="sans-serif-light"
             android:textColor="?attr/list_subtitle"
-            android:visibility="@{TextUtils.isEmpty(item.description) ? View.GONE : View.VISIBLE}"/>
+            android:visibility="@{TextUtils.isEmpty(item.description) ? View.GONE : View.VISIBLE}"
+            tools:ignore="EllipsizeMaxLines" />
 
         <ImageView
             android:id="@+id/item_more"

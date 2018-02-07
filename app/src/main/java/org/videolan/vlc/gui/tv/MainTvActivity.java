@@ -53,16 +53,17 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ProgressBar;
 
+import com.bulesky.vlcdemo.BuildConfig;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.Medialibrary;
+import com.bulesky.vlcdemo.media.Tools;
+import com.bulesky.vlcdemo.media.interfaces.MediaUpdatedCb;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.libvlc.Media;
 import org.videolan.libvlc.MediaPlayer;
-import org.videolan.medialibrary.Medialibrary;
-import org.videolan.medialibrary.Tools;
-import org.videolan.medialibrary.interfaces.MediaUpdatedCb;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.vlc.BuildConfig;
 import org.videolan.vlc.ExternalMonitor;
 import org.videolan.vlc.PlaybackService;
-import org.videolan.vlc.R;
 import org.videolan.vlc.RecommendationsService;
 import org.videolan.vlc.StartActivity;
 import org.videolan.vlc.VLCApplication;

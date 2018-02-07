@@ -29,7 +29,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.R;
+
 
 public class HeaderMediaSwitcher extends AudioMediaSwitcher {
 

@@ -9,11 +9,12 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.Tools;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.medialibrary.Tools;
-import org.videolan.medialibrary.media.MediaWrapper;
 import org.videolan.vlc.PlaybackService;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.util.FileUtils;
 import org.videolan.vlc.util.SubtitlesDownloader;

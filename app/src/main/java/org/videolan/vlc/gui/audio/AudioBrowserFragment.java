@@ -42,14 +42,15 @@ import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.TextView;
 
-import org.videolan.medialibrary.Medialibrary;
-import org.videolan.medialibrary.interfaces.MediaAddedCb;
-import org.videolan.medialibrary.interfaces.MediaUpdatedCb;
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.medialibrary.media.Playlist;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.Medialibrary;
+import com.bulesky.vlcdemo.media.interfaces.MediaAddedCb;
+import com.bulesky.vlcdemo.media.interfaces.MediaUpdatedCb;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+import com.bulesky.vlcdemo.media.model.Playlist;
+
 import org.videolan.vlc.MediaParsingService;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.MainActivity;
 import org.videolan.vlc.gui.PlaylistActivity;

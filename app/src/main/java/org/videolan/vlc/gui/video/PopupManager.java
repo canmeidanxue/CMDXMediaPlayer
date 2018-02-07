@@ -41,12 +41,13 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.libvlc.IVLCVout;
 import org.videolan.libvlc.Media;
 import org.videolan.libvlc.MediaPlayer;
-import org.videolan.medialibrary.media.MediaWrapper;
 import org.videolan.vlc.PlaybackService;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.preferences.PreferencesActivity;
 import org.videolan.vlc.gui.view.PopupLayout;

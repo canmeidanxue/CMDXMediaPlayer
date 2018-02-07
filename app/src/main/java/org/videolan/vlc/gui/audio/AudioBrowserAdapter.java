@@ -34,15 +34,12 @@ import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
 
-import org.videolan.medialibrary.media.DummyItem;
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.vlc.BR;
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.databinding.AudioBrowserItemBinding;
+import com.bulesky.vlcdemo.databinding.AudioBrowserSeparatorBinding;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+
 import org.videolan.vlc.SortableAdapter;
 import org.videolan.vlc.VLCApplication;
-import org.videolan.vlc.databinding.AudioBrowserItemBinding;
-import org.videolan.vlc.databinding.AudioBrowserSeparatorBinding;
 import org.videolan.vlc.gui.helpers.AsyncImageLoader;
 import org.videolan.vlc.gui.helpers.SelectorViewHolder;
 import org.videolan.vlc.gui.view.FastScroller;
@@ -56,7 +53,8 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-import static org.videolan.medialibrary.media.MediaLibraryItem.FLAG_SELECTED;
+import static com.bulesky.vlcdemo.media.model.MediaLibraryItem.FLAG_SELECTED;
+
 
 public class AudioBrowserAdapter extends SortableAdapter<MediaLibraryItem, AudioBrowserAdapter.ViewHolder> implements FastScroller.SeparatedAdapter, Filterable {
 

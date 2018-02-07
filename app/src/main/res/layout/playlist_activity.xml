@@ -3,7 +3,7 @@
     <data>
         <variable
             name="playlist"
-            type="org.videolan.medialibrary.media.MediaLibraryItem" />
+            type="com.bulesky.vlcdemo.media.model.MediaLibraryItem" />
         <variable
             name="cover"
             type="android.graphics.drawable.BitmapDrawable"/>

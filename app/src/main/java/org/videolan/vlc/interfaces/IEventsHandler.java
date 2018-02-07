@@ -3,7 +3,8 @@ package org.videolan.vlc.interfaces;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import org.videolan.medialibrary.media.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+
 
 public interface IEventsHandler {
     void onClick(View v, int position, MediaLibraryItem item);

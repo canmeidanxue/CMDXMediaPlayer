@@ -30,8 +30,9 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
+import com.bulesky.vlcdemo.R;
+
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.vlc.R;
 import org.videolan.vlc.interfaces.OnEqualizerBarChangeListener;
 
 public class EqualizerBar extends LinearLayout {

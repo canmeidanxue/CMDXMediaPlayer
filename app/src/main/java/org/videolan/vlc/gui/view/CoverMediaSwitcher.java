@@ -27,7 +27,8 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
 
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.R;
+
 
 public class CoverMediaSwitcher extends AudioMediaSwitcher {
 

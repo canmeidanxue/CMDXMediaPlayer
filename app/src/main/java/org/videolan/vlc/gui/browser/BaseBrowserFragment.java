@@ -53,13 +53,14 @@ import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.TextView;
 
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+import com.bulesky.vlcdemo.media.model.Storage;
+
 import org.videolan.libvlc.Media;
 import org.videolan.libvlc.util.AndroidUtil;
 import org.videolan.libvlc.util.MediaBrowser;
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.medialibrary.media.Storage;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.InfoActivity;
 import org.videolan.vlc.gui.MainActivity;

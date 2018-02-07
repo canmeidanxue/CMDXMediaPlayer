@@ -31,9 +31,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
+import com.bulesky.vlcdemo.BuildConfig;
+import com.bulesky.vlcdemo.R;
+
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.vlc.BuildConfig;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.audio.AudioPagerAdapter;
 import org.videolan.vlc.gui.helpers.UiTools;

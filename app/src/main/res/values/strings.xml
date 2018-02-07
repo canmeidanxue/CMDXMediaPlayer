@@ -468,4 +468,33 @@
     <string name="ml_external_storage_msg">是否同意VLC将%1$s 存储空间用于媒体库？</string>
     <string name="ml_external_storage_accept">是</string>
     <string name="ml_external_storage_decline">否</string>
+    <string name="chroma_format_default" translatable="false">RV16</string>
+    <string name="sortby_number">Nb tracks</string>
+    <string name="sortby_number_desc">Nb tracks (desc)</string>
+    <string name="sortby_artist_name">Artist name</string>
+    <string name="sortby_artist_name_desc">Artist name (desc)</string>
+    <string name="sortby_album_name">Album name</string>
+    <string name="sortby_album_name_desc">Album name (desc)</string>
+    <string name="aout_audiotrack" translatable="false">AudioTrack</string>
+    <string name="aout_opensles" translatable="false">OpenSL ES</string>
+    <string name="extensions_prefs_category">Extensions</string>
+    <string name="time_0" translatable="false">0:00</string>
+    <string name="about_link" translatable="false">        &lt;a href=&quot;http://www.videolan.org/vlc/&quot;&gt;http://www.videolan.org/vlc/&lt;/a&gt;</string>
+    <string name="authors" translatable="false">Edward&#160;Wang, Sébastien&#160;Toque, Adrien&#160;Maglo, Jean-Baptiste&#160;Kempf, Ludovic&#160;Fauvet, Rafaël&#160;Carré, Alexandre&#160;Perraud, Michael&#160;Merg, Martin&#160;Storsjö, Rémi&#160;Duraffort, Dominique&#160;Martinet, Jean-Philippe&#160;André, Felix&#160;Abecassis, Christoph&#160;Miebach, Hugo&#160;Beauzée-Luyssen, Felix&#160;Paul&#160;Kühne, John&#160;Mooring, Pavol&#160;Rusnak, Rohit&#160;Yadav, Tanguy&#160;Pruvot, Thomas&#160;Clavier, Asad&#160;Mehmood, Garret&#160;Kelly, Philipp&#160;Dreimann, Walter&#160;Heck, Thomas&#160;Guillem, Geoffrey&#160;Métais.</string>
+    <string name="empty" translatable="false"></string>
+    <string name="load_1_period" translatable="false">.</string>
+    <string name="load_2_period" translatable="false">..</string>
+    <string name="load_3_period" translatable="false">...</string>
+    <string name="widget_default_text" translatable="false">VLC mini player</string>
+    <string name="about_copyright" translatable="false">Copyleft &#169; 1996&#8211;2017 by VideoLAN.\n</string>
+    <string name="build_revision">build_revision</string>
+    <string name="build_time">build_time</string>
+    <string name="build_host">build_host</string>
+    <string name="build_vlc_revision">build_vlc_revision</string>
+    <string name="exit_app_msg">Are you sure you want to quit VLC?</string>
+    <string name="extension_permission_title">Activate new extension \"%1$s\"?</string>
+    <string name="extension_permission_checkbox_title">Show in %1$s</string>
+    <string name="extension_prefs_activation_title">Activate</string>
+    <string name="audio_boost_warning">Slide up again to go beyond 100%</string>
+
 </resources>

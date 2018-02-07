@@ -24,6 +24,8 @@
 
 package org.videolan.vlc.util;
 
+import android.databinding.OnRebindCallback;
+import android.databinding.ViewDataBinding;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;

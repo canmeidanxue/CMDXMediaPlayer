@@ -33,15 +33,16 @@ import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
 
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.databinding.BrowserItemBinding;
+import com.bulesky.vlcdemo.databinding.BrowserItemSeparatorBinding;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+import com.bulesky.vlcdemo.media.model.Storage;
+
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.medialibrary.media.Storage;
-import org.videolan.vlc.R;
 import org.videolan.vlc.SortableAdapter;
 import org.videolan.vlc.VLCApplication;
-import org.videolan.vlc.databinding.BrowserItemBinding;
-import org.videolan.vlc.databinding.BrowserItemSeparatorBinding;
 import org.videolan.vlc.gui.helpers.SelectorViewHolder;
 import org.videolan.vlc.util.MediaItemFilter;
 import org.videolan.vlc.util.Util;
@@ -50,9 +51,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static org.videolan.medialibrary.media.MediaLibraryItem.FLAG_SELECTED;
-import static org.videolan.medialibrary.media.MediaLibraryItem.TYPE_MEDIA;
-import static org.videolan.medialibrary.media.MediaLibraryItem.TYPE_STORAGE;
+import static com.bulesky.vlcdemo.media.model.MediaLibraryItem.FLAG_SELECTED;
+import static com.bulesky.vlcdemo.media.model.MediaLibraryItem.TYPE_MEDIA;
+import static com.bulesky.vlcdemo.media.model.MediaLibraryItem.TYPE_STORAGE;
+
 
 public class BaseBrowserAdapter extends SortableAdapter<MediaLibraryItem, BaseBrowserAdapter.ViewHolder> implements Filterable {
     protected static final String TAG = "VLC/BaseBrowserAdapter";
@@ -77,7 +79,7 @@ public class BaseBrowserAdapter extends SortableAdapter<MediaLibraryItem, BaseBr
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        if (viewType == MediaLibraryItem.TYPE_MEDIA || viewType == MediaLibraryItem.TYPE_STORAGE)
+        if (viewType == TYPE_MEDIA || viewType == TYPE_STORAGE)
             return new MediaViewHolder(BrowserItemBinding.inflate(inflater, parent, false));
         else
             return new SeparatorViewHolder(BrowserItemSeparatorBinding.inflate(inflater, parent, false));
@@ -348,7 +350,7 @@ public class BaseBrowserAdapter extends SortableAdapter<MediaLibraryItem, BaseBr
             Collections.sort(list, sMediaComparator);
         mMediaCount = 0;
         for (MediaLibraryItem item : list) {
-            if (item.getItemType() == MediaLibraryItem.TYPE_MEDIA
+            if (item.getItemType() == TYPE_MEDIA
                     && (((MediaWrapper)item).getType() == MediaWrapper.TYPE_AUDIO|| (AndroidUtil.isHoneycombOrLater && ((MediaWrapper)item).getType() == MediaWrapper.TYPE_VIDEO)))
                 ++mMediaCount;
         }

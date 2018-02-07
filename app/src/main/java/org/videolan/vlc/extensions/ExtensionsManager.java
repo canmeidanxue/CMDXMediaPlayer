@@ -17,7 +17,8 @@ import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.view.MenuItem;
 
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.R;
+
 import org.videolan.vlc.gui.MainActivity;
 
 import java.util.ArrayList;

@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="5dp"
@@ -36,7 +37,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/cover"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:ignore="EllipsizeMaxLines" />
 
         <TextView
             android:id="@+id/artist"
@@ -52,6 +54,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title"
             app:layout_constraintStart_toEndOf="@id/cover"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="EllipsizeMaxLines" />
 
 </android.support.constraint.ConstraintLayout>

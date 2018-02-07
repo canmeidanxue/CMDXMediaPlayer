@@ -40,11 +40,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
-import org.videolan.medialibrary.Medialibrary;
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.Medialibrary;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.vlc.MediaParsingService;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.InfoActivity;
 import org.videolan.vlc.gui.PlaybackServiceFragment;

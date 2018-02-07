@@ -22,7 +22,8 @@ package org.videolan.vlc.gui.tv;
 
 import android.os.Bundle;
 
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.R;
+
 import org.videolan.vlc.gui.tv.browser.BaseTvActivity;
 
 public class DetailsActivity extends BaseTvActivity {

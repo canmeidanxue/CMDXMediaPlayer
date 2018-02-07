@@ -35,10 +35,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.browser.MediaBrowserFragment;
 import org.videolan.vlc.gui.view.SwipeRefreshLayout;
@@ -48,6 +49,7 @@ import org.videolan.vlc.interfaces.IRefreshable;
 import org.videolan.vlc.media.MediaUtils;
 
 import java.util.List;
+
 
 public class HistoryFragment extends MediaBrowserFragment implements IRefreshable, IHistory, SwipeRefreshLayout.OnRefreshListener, IEventsHandler {
 

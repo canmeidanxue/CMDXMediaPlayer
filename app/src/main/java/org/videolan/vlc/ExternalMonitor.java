@@ -34,14 +34,17 @@ import android.net.Network;
 import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
+import android.preference.PreferenceManager;
+import android.support.annotation.RequiresApi;
 import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.preference.PreferenceManager;
 import android.text.TextUtils;
 
+import com.bulesky.vlcdemo.media.Medialibrary;
+
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.medialibrary.Medialibrary;
 import org.videolan.vlc.gui.helpers.UiTools;
 import org.videolan.vlc.util.AndroidDevices;
 import org.videolan.vlc.util.FileUtils;
@@ -128,6 +131,7 @@ public class ExternalMonitor extends BroadcastReceiver {
     }
 
     private ConnectivityManager cm = null;
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onReceive(Context context, Intent intent) {
         final String action = intent.getAction();
@@ -237,6 +241,7 @@ public class ExternalMonitor extends BroadcastReceiver {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private boolean updateVPNStatus() {
         if (AndroidUtil.isLolliPopOrLater) {
             for (Network network : cm.getAllNetworks()) {

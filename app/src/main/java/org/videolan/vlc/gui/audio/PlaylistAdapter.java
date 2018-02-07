@@ -28,7 +28,6 @@ import android.databinding.DataBindingUtil;
 import android.os.Message;
 import android.support.annotation.MainThread;
 import android.support.v4.app.Fragment;
-import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,11 +36,12 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.Toast;
 
-import org.videolan.medialibrary.media.MediaWrapper;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.databinding.PlaylistItemBinding;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.vlc.PlaybackService;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
-import org.videolan.vlc.databinding.PlaylistItemBinding;
 import org.videolan.vlc.gui.BaseQueuedAdapter;
 import org.videolan.vlc.gui.helpers.UiTools;
 import org.videolan.vlc.interfaces.SwipeDragHelperAdapter;

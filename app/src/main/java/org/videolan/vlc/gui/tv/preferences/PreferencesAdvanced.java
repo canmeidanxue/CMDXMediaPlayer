@@ -38,9 +38,9 @@ import android.support.v7.preference.Preference;
 import android.text.TextUtils;
 import android.widget.Toast;
 
+import com.bulesky.vlcdemo.R;
+
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.vlc.BuildConfig;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.DebugLogActivity;
 import org.videolan.vlc.util.VLCInstance;

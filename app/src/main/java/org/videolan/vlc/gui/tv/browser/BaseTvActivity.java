@@ -35,7 +35,8 @@ import android.preference.PreferenceManager;
 import android.support.v4.content.LocalBroadcastManager;
 import android.view.KeyEvent;
 
-import org.videolan.medialibrary.Medialibrary;
+import com.bulesky.vlcdemo.media.Medialibrary;
+
 import org.videolan.vlc.MediaParsingService;
 import org.videolan.vlc.ExternalMonitor;
 import org.videolan.vlc.VLCApplication;

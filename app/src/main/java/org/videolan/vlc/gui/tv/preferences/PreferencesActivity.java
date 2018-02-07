@@ -32,8 +32,9 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
 
+import com.bulesky.vlcdemo.R;
+
 import org.videolan.vlc.PlaybackService;
-import org.videolan.vlc.R;
 
 @SuppressWarnings("deprecation")
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)

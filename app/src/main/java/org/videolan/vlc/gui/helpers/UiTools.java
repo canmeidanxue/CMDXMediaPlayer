@@ -65,12 +65,13 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bulesky.vlcdemo.BuildConfig;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.vlc.BuildConfig;
 import org.videolan.vlc.MediaParsingService;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.audio.BaseAudioBrowser;
 import org.videolan.vlc.gui.browser.SortableFragment;
@@ -183,7 +184,7 @@ public class UiTools {
     }
 
     /**
-     * Generate a value suitable for use in {@link #setId(int)}.
+     * Generate a value suitable for use in .
      * This value will not collide with ID values generated at build time by aapt for R.id.
      *
      * @return a generated ID value
@@ -221,7 +222,7 @@ public class UiTools {
         final TextView compiled = v.findViewById(R.id.main_compiled);
         compiled.setText(builder + " (" + builddate + ")");
         final TextView textview_rev = v.findViewById(R.id.main_revision);
-        textview_rev.setText(VLCApplication.getAppResources().getString(R.string.revision) + " " + revision + " (" + builddate + ") " + BuildConfig.FLAVOR_abi);
+        textview_rev.setText(VLCApplication.getAppResources().getString(R.string.revision) + " " + revision + " (" + builddate + ") ");
 
         final ImageView logo = v.findViewById(R.id.logo);
         logo.setOnClickListener(new View.OnClickListener() {

@@ -13,16 +13,19 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.IBinder;
 import android.os.PowerManager;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.bulesky.vlcdemo.BuildConfig;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.Medialibrary;
+import com.bulesky.vlcdemo.media.interfaces.DevicesDiscoveryCb;
+
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.medialibrary.Medialibrary;
-import org.videolan.medialibrary.interfaces.DevicesDiscoveryCb;
 import org.videolan.vlc.gui.helpers.NotificationHelper;
 import org.videolan.vlc.util.AndroidDevices;
 import org.videolan.vlc.util.FileUtils;

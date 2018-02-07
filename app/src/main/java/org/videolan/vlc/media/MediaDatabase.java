@@ -35,8 +35,9 @@ import android.support.v4.util.ArrayMap;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.libvlc.Media;
-import org.videolan.medialibrary.media.MediaWrapper;
 import org.videolan.libvlc.util.AndroidUtil;
 import org.videolan.vlc.VLCApplication;
 
@@ -704,7 +705,6 @@ public class MediaDatabase {
 
     /**
      * Check if the item is already in the database
-     * @param location of the item (primary key)
      * @return True if the item exists, false if it does not
      */
     public synchronized boolean mediaItemExists(Uri uri) {

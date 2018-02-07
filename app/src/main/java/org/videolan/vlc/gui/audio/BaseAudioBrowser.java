@@ -30,10 +30,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.vlc.PlaybackService;
-import org.videolan.vlc.R;
 import org.videolan.vlc.gui.ContentActivity;
 import org.videolan.vlc.gui.browser.SortableFragment;
 import org.videolan.vlc.gui.helpers.AudioUtil;
@@ -162,7 +163,6 @@ public abstract class BaseAudioBrowser extends SortableFragment<AudioBrowserAdap
         return false;
     }
 
-    @Override
     public void onClick(View v, int position, MediaLibraryItem item) {
         if (mActionMode != null) {
             item.toggleStateFlag(MediaLibraryItem.FLAG_SELECTED);
@@ -172,7 +172,6 @@ public abstract class BaseAudioBrowser extends SortableFragment<AudioBrowserAdap
         }
     }
 
-    @Override
     public boolean onLongClick(View v, int position, MediaLibraryItem item) {
         if (mActionMode != null)
             return false;
@@ -183,7 +182,6 @@ public abstract class BaseAudioBrowser extends SortableFragment<AudioBrowserAdap
         return true;
     }
 
-    @Override
     public void onCtxClick(View anchor, final int position, final MediaLibraryItem mediaItem) {}
 
     @Override

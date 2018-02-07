@@ -26,7 +26,8 @@ import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import org.videolan.vlc.BR;
+import com.bulesky.vlcdemo.BR;
+
 
 public class SelectorViewHolder<T extends ViewDataBinding> extends RecyclerView.ViewHolder implements View.OnFocusChangeListener {
 

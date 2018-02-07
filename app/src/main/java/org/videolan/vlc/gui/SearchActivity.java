@@ -22,12 +22,13 @@ import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
 
-import org.videolan.medialibrary.Medialibrary;
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.SearchAggregate;
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.databinding.SearchActivityBinding;
+import com.bulesky.vlcdemo.media.Medialibrary;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.SearchAggregate;
+
 import org.videolan.vlc.VLCApplication;
-import org.videolan.vlc.databinding.SearchActivityBinding;
 import org.videolan.vlc.gui.helpers.UiTools;
 import org.videolan.vlc.gui.view.ContextMenuRecyclerView;
 import org.videolan.vlc.media.MediaUtils;

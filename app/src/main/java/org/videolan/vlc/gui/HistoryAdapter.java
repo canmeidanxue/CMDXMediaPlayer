@@ -24,9 +24,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.medialibrary.media.MediaWrapper;
-import org.videolan.vlc.databinding.HistoryItemBinding;
+import com.bulesky.vlcdemo.databinding.HistoryItemBinding;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
+
 import org.videolan.vlc.gui.helpers.SelectorViewHolder;
 import org.videolan.vlc.interfaces.IEventsHandler;
 import org.videolan.vlc.util.Util;

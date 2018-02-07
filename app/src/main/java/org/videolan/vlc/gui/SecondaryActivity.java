@@ -27,14 +27,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.MenuItem;
 import android.view.View;
 
-import org.videolan.medialibrary.Medialibrary;
+import com.bulesky.vlcdemo.R;
+import com.bulesky.vlcdemo.media.Medialibrary;
+
 import org.videolan.vlc.MediaParsingService;
-import org.videolan.vlc.R;
 import org.videolan.vlc.VLCApplication;
 import org.videolan.vlc.gui.audio.AudioAlbumsSongsFragment;
 import org.videolan.vlc.gui.audio.AudioBrowserFragment;

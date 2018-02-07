@@ -6,7 +6,7 @@
     <data>
         <import type="android.view.View"/>
         <import type="android.text.TextUtils"/>
-        <import type="org.videolan.medialibrary.media.MediaLibraryItem"/>
+        <import type="com.bulesky.vlcdemo.media.model.MediaLibraryItem"/>
         <variable
             name="holder"
             type="org.videolan.vlc.gui.browser.BaseBrowserAdapter.ViewHolder"/>

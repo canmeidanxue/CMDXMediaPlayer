@@ -28,8 +28,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.bulesky.vlcdemo.R;
+
 import org.videolan.libvlc.Media;
-import org.videolan.vlc.R;
 import org.videolan.vlc.util.Strings;
 
 import java.util.List;

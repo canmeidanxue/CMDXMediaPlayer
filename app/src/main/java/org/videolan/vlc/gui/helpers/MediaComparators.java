@@ -19,7 +19,8 @@
  *****************************************************************************/
 package org.videolan.vlc.gui.helpers;
 
-import org.videolan.medialibrary.media.MediaWrapper;
+
+import com.bulesky.vlcdemo.media.model.MediaWrapper;
 
 import java.util.Comparator;
 

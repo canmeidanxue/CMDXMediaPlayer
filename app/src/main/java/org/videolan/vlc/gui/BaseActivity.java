@@ -7,7 +7,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
 
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.R;
+
 import org.videolan.vlc.VLCApplication;
 
 

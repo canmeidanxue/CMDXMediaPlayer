@@ -43,8 +43,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bulesky.vlcdemo.R;
+
 import org.videolan.libvlc.util.AndroidUtil;
-import org.videolan.vlc.R;
 import org.videolan.vlc.util.WeakHandler;
 
 

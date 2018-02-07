@@ -1,17 +1,12 @@
 package org.videolan.vlc.gui;
 
 import android.app.Activity;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 
-import org.videolan.libvlc.util.VLCUtil;
-import org.videolan.vlc.R;
+import com.bulesky.vlcdemo.R;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import org.videolan.libvlc.util.VLCUtil;
 
 public class CompatErrorActivity extends Activity {
     public final static String TAG = "VLC/CompatErrorActivity";

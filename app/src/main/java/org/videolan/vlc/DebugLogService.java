@@ -145,7 +145,7 @@ public class DebugLogService extends Service implements Logcat.Callback, Runnabl
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
         builder.setContentTitle(getResources().getString(R.string.log_service_title));
         builder.setContentText(getResources().getString(R.string.log_service_text));
-        builder.setSmallIcon(R.drawable.ic_stat_vlc);
+        builder.setSmallIcon(R.mipmap.ic_stat_vlc);
         builder.setContentIntent(pi);
         final Notification notification = builder.build();
         startForeground(R.string.log_service_title, notification);

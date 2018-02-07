@@ -6,8 +6,9 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import org.videolan.medialibrary.media.MediaLibraryItem;
-import org.videolan.vlc.databinding.SearchItemBinding;
+import com.bulesky.vlcdemo.databinding.SearchItemBinding;
+import com.bulesky.vlcdemo.media.model.MediaLibraryItem;
+
 import org.videolan.vlc.gui.helpers.UiTools;
 
 

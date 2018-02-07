@@ -2,11 +2,11 @@
 <layout>
     <data>
         <import type="android.view.View" />
-        <import type="org.videolan.medialibrary.Tools" />
-        <import type="org.videolan.medialibrary.media.MediaLibraryItem" />
+        <import type="com.bulesky.vlcdemo.media.Tools" />
+        <import type="com.bulesky.vlcdemo.media.model.MediaLibraryItem" />
         <variable
             name="item"
-            type="MediaLibraryItem" />
+            type="com.bulesky.vlcdemo.media.model.MediaLibraryItem" />
         <variable
             name="cover"
             type="android.graphics.drawable.BitmapDrawable"/>
