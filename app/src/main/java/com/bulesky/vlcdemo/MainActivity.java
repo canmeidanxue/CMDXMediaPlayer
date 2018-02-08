@@ -93,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
 //        media = new Media(libVLC, Uri.parse(url));
         media = new Media(libVLC, uri);
         mediaPlayer.setMedia(media);
-
         ivlcVout = mediaPlayer.getVLCVout();
         ivlcVout.setVideoView(surfaceView);
         ivlcVout.attachViews();
